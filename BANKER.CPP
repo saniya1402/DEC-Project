@@ -879,7 +879,7 @@ void manmenu()
 			cout << "\n\n\t04. MODIFY EMPLOYEE DETAILS";
 			cout << "\n\n\t05. DISPLAY ALL EMPLOYEES";
 			cout << "\n\n\t06. RETURN TO MAIN MENU";
-			cout << "\n\n\tEnter tour choice(1-6):";
+			cout << "\n\n\tEnter your choice(1-6):";
 			cin >> m;
 			switch (m)
 			{
