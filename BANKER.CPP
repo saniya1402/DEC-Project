@@ -1,5 +1,5 @@
 //***************************************************************
-//                   HEADER FILE USED IN PROJECT
+//                   header file used in project
 //****************************************************************
 
 #include <fstream>
@@ -13,7 +13,7 @@
 using namespace std;
 
 //***************************************************************
-//                   CLASS USED IN PROJECT
+//                   class used in project
 //****************************************************************
 
 class account
@@ -316,7 +316,7 @@ int passcheck(char a[], char b[]); //function to check password or pin
 void intro();					   //introductory screen function
 
 //***************************************************************
-//    	THE MAIN FUNCTION OF PROGRAM
+//    	the main function of program
 //****************************************************************
 
 int main()
@@ -364,7 +364,7 @@ int main()
 			break;
 
 		case '6':
-			cout << "\n\n\tThanks for using bank managemnt system";
+			cout << "\n\n\tThank you for using bank managemnt system";
 			break;
 		default:
 			cout << "\a";
@@ -407,7 +407,7 @@ void display_sp(int n)
 	inFile.open("account.txt", ios::binary);
 	if (!inFile)
 	{
-		cout << "File could not be open !! Press any Key...";
+		cout << "File could not be opened !! Press any Key...";
 		return;
 	}
 
@@ -454,7 +454,7 @@ void modify_account(int n)
 	File.open("account.txt", ios::binary | ios::in | ios::out);
 	if (!File)
 	{
-		cout << "File could not be open !! Press any Key......";
+		cout << "File could not be opened !! Press any Key......";
 		return;
 	}
 	while (File.read((char *)&ac, sizeof(account)) && found == 0)
@@ -489,7 +489,7 @@ void delete_account(int n)
 	inFile.open("account.txt", ios::binary);
 	if (!inFile)
 	{
-		cout << "File could not be open !! Press any Key.......";
+		cout << "File could not be opened !! Press any Key.......";
 		return;
 	}
 	outFile.open("Temp.txt", ios::binary);
@@ -526,7 +526,7 @@ void display_all()
 	inFile.open("account.txt", ios::binary);
 	if (!inFile)
 	{
-		cout << "File could not be open !! Press any Key...";
+		cout << "File could not be opened !! Press any Key...";
 		return;
 	}
 	cout << "\n\n\t\tACCOUNT HOLDER LIST\n\n";
@@ -555,7 +555,7 @@ void deposit_withdraw(int n, int option)
 	File.open("account.txt", ios::binary | ios::in | ios::out);
 	if (!File)
 	{
-		cout << "File could not be open !! Press any Key...";
+		cout << "File could not be opened !! Press any Key...";
 		return;
 	}
 	while (File.read((char *)&ac, sizeof(account)) && found == 0)
@@ -575,7 +575,7 @@ void deposit_withdraw(int n, int option)
 				ac.show_account();
 				if (option == 1)
 				{
-					cout << "\n\n\tTO DEPOSITE AMOUNT ";
+					cout << "\n\n\tTO DEPOSIT AMOUNT ";
 					cout << "\n\nEnter The amount to be deposited:";
 					cin >> amt;
 					ac.dep(amt);
@@ -587,7 +587,7 @@ void deposit_withdraw(int n, int option)
 					cin >> amt;
 					int bal = ac.retdeposit() - amt;
 					if ((bal < 500 && ac.rettype() == 'S') || (bal < 1000 && ac.rettype() == 'C'))
-						cout << "Insufficience balance!!!!!!";
+						cout << "Insufficient balance!!!!!!";
 					else
 						ac.draw(amt);
 				}
